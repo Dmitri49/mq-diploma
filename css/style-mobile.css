@@ -1,0 +1,159 @@
+/* ==========POPUP========== */
+
+.popup-container {
+  width: 330px;
+}
+
+/* ==========HEADER========= */
+
+.welcome {
+  background-image: url(../images/banner-mobile.jpg);
+}
+
+.container {
+  flex-direction: column-reverse;
+}
+
+.header-logo {
+  width: 270px;
+  margin-top: 170px;
+}
+
+.menu-button {
+  display: block;
+}
+
+.menu-list {
+  display: none;
+}
+
+.menu {
+  margin-left: auto;
+}
+
+.title {
+  padding-top: 30px;
+  font-size: 26px;
+}
+
+/* ==========TRENDS========== */
+
+.trends-wrapper {
+  margin-top: 50px;
+}
+
+.trends-title {
+  font-size: 16px;
+}
+
+.trends-post-section {
+  height: 230px;
+  width: 100%;
+  margin-bottom: 2px;
+}
+
+.trends-posts {
+  flex-wrap: wrap;
+}
+
+.trends-post-info {
+  padding: 20px;
+}
+
+.trends-post-link {
+  font-size: 16px;
+}
+
+/* ==========CONTENT========== */
+
+.content-wrapper {
+  flex-direction: column;
+  max-width: 360px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.posts {
+  margin-right: 0;
+  margin-bottom: 35px;
+}
+
+.post-section {
+  flex-direction: column;
+  border-bottom: 3px solid #eeeeee;
+}
+
+.post-section:nth-child(n+2) {
+  margin-top: 35px;
+}
+
+.post-picture {
+  width: 330px;
+  margin-right: 0;
+  margin-bottom: 8px;
+}
+
+.title-link {
+  font-size: 16px;
+}
+
+.post-description {
+  font-size: 14px;
+}
+
+/* ==========SIDE-BAR========== */
+
+.side-bar {
+  width: 100%;
+}
+
+.primary-title {
+  font-size: 16px;
+}
+
+.new-post-info {
+  width: 100%;
+}
+
+.search, .mailing, .tags, .topics {
+  margin-bottom: 35px;
+}
+
+/*  ==========SHOP==========  */
+
+.shop-wrapper {
+  max-width: 360px;
+  margin-bottom: 50px;
+}
+
+.shop-title {
+  font-size: 16px;
+}
+
+.shop-products {
+  flex-direction: column;
+}
+
+.product-picture {
+  height: 285px;
+}
+
+.product-section:nth-child(n+2) {
+  margin-top: 48px;
+}
+
+/*  ==========FOOTER==========  */
+
+.footer {
+  max-width: 360px;
+}
+
+.social {
+  margin-bottom: 45px;
+}
+
+@media (orientation: landscape) {
+  .trends-post-section {
+    width: calc(50% - 2px);
+  }
+}
