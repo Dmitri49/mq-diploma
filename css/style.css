@@ -420,41 +420,45 @@
 .trends-post-section {
   position: relative;
   display: flex;
+  flex-wrap: nowrap;
   align-items: flex-end;
   width: calc(25% - 3px);
-  height: 320px;
-  padding: 15px 20px;
+  min-height: 320px;
+  padding: 20px;
+
+  background-size: cover;
+}
+
+.trends-post-section {
+  position: relative;
+  z-index: 0;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+
+  background-size: cover;
+  padding: 20px;
 }
 
 .garden-on-the-windowsill {
   background-image: url(../images/trend1.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   background-color: #000000;
 }
 
 .cheeses-to-taste {
   background-image: url(../images/trend2.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   background-color: #000000;
 }
 
 .the-first-hike {
   background-image: url(../images/trend3.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   background-color: #000000;
 }
 
 .vitamin-c-in-lemons {
   background-image: url(../images/trend4.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   background-color: #000000;
 }
 
@@ -473,10 +477,11 @@
 
 .trends-post-info {
   position: relative;
+  width: 100%;
   flex-grow: 1;
   z-index: 2;
   border: 3px solid #b59f5b;
-  padding: 33px;
+  padding: 25px;
 }
 
 .trends-tags-list {
@@ -682,7 +687,6 @@
 
 .new-post-image {
   width: 70px;
-  /* flex: none; */
   margin-right: 20px;
 }
 
@@ -933,16 +937,8 @@
 .product-section {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 300px;
-}
-
-.product-picture {
-  height: 200px;
-  /* flex: none; */
-}
-
-.product-image {
-  width: 100%;
 }
 
 .product-info {
@@ -1123,8 +1119,6 @@
 /* =========================TABLET============================ */
 
 @media (min-width: 641px) and (max-width: 1199px) {
-  /* ==========HEADER========== */
-
   .welcome {
     background-image: url(../images/banner-bg-tablet.jpg);
   }
@@ -1141,34 +1135,34 @@
     font-size: 40px;
   }
 
-  /* ==========TRENDS========== */
-
   .trends-wrapper {
     margin-top: 50px;
   }
 
-  .trends-title {
+  /* .trends-title {
     font-size: 18px;
-  }
+  } */
 
   .trends-posts {
     flex-wrap: wrap;
   }
 
   .trends-post-section {
-    height: 250px;
-    width: calc(50% - 2px);
+    width: calc((100% / 2) - 3px);
+    min-height: 240px;
   }
 
   .trends-post-section:nth-child(n+3) {
-    margin-top: 2px;
+    margin-top: 3px;
+  }
+
+  .trends-post-section:nth-child(n+2) {
+    margin-left: 0;
   }
 
   .trends-post-link {
     font-size: 17px;
   }
-
-  /* ==========CONTENT========== */
 
   .content-wrapper {
     max-width: 730px;
@@ -1207,8 +1201,6 @@
     margin-bottom: 30px;
   }
 
-  /*  ==========SHOP==========  */
-
   .shop-wrapper {
     max-width: 730px;
     margin-bottom: 50px;
@@ -1222,10 +1214,6 @@
     flex-wrap: wrap;
   }
 
-  .product-picture {
-    height: 225px;
-  }
-
   .product-section {
     margin-bottom: 48px;;
   }
@@ -1234,24 +1222,32 @@
     font-size: 17px;
   }
 
-  /*  ==========FOOTER==========  */
-
   .footer {
     max-width: 730px;
   }
 }
 
+@media (min-width: 641px) and (orientation: landscape) {
+  .trends-post-section {
+    width: calc((100% / 4) - 3px);
+    min-height: 320px;
+  }
+
+  .trends-post-section:nth-child(n+2) {
+    margin-left: 1px;
+  }
+
+  .trends-post-section:nth-child(n+3) {
+    margin-top: 0px;
+  }
+}
 
 /* =========================MOBILE============================ */
 
 @media (max-width: 640px) {
-  /* ==========POPUP========== */
-
   .popup-container {
     width: 330px;
   }
-
-  /* ==========HEADER========= */
 
   .welcome {
     background-image: url(../images/banner-mobile.jpg);
@@ -1283,8 +1279,6 @@
     font-size: 26px;
   }
 
-  /* ==========TRENDS========== */
-
   .trends-wrapper {
     margin-top: 50px;
   }
@@ -1294,7 +1288,7 @@
   }
 
   .trends-post-section {
-    height: 230px;
+    min-height: 230px;
     width: 100%;
     margin-bottom: 2px;
   }
@@ -1310,8 +1304,6 @@
   .trends-post-link {
     font-size: 16px;
   }
-
-  /* ==========CONTENT========== */
 
   .content-wrapper {
     flex-direction: column;
@@ -1348,8 +1340,6 @@
     font-size: 14px;
   }
 
-  /* ==========SIDE-BAR========== */
-
   .side-bar {
     width: 100%;
   }
@@ -1366,8 +1356,6 @@
     margin-bottom: 35px;
   }
 
-  /*  ==========SHOP==========  */
-
   .shop-wrapper {
     max-width: 360px;
     margin-bottom: 50px;
@@ -1381,15 +1369,9 @@
     flex-direction: column;
   }
 
-  .product-picture {
-    height: 285px;
-  }
-
   .product-section:nth-child(n+2) {
     margin-top: 48px;
   }
-
-  /*  ==========FOOTER==========  */
 
   .footer {
     max-width: 360px;
@@ -1397,5 +1379,20 @@
 
   .social {
     margin-bottom: 45px;
+  }
+}
+
+@media (max-width: 640px) and (orientation: landscape) {
+  .trends-post-section {
+    width: calc((100% / 2) - 3px);
+    min-height: 240px;
+  }
+
+  .trends-post-section:nth-child(n+3) {
+    margin-top: 3px;
+  }
+
+  .trends-post-section:nth-child(n+2) {
+    margin-left: 0;
   }
 }
