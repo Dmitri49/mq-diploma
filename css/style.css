@@ -562,7 +562,7 @@
 }
 
 .post-picture {
-  max-width: 380px;
+  max-width: 395px;
   margin-right: 32px;
   flex: none;
 }
@@ -1049,11 +1049,10 @@
 /* ==========FOOTER========== */
 
 .footer {
-  max-width: 1200px;
+  width: 100%;
+  /* max-width: 1200px; */
   margin-left: auto;
   margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .social {
@@ -1178,13 +1177,17 @@
     }
 
     .content-wrapper {
-      max-width: 730px;
+      max-width: 830px;
+      /* max-width: 730px; */
       margin-top: 50px;
       margin-bottom: 50px;
     }
 
     .posts {
-      margin-right: 35px;
+      width: 50%;
+      /* width war nicht */
+      margin-right: 10%;
+      /* margin-right: 35px; */
     }
 
     .post-section {
@@ -1201,7 +1204,7 @@
     }
 
     .post-picture {
-      max-width: 395px;
+      /* max-width: 395px; */
       margin-right: 0;
       margin-bottom: 8px;
     }
@@ -1210,12 +1213,20 @@
       font-size: 17px;
     }
 
+    .side-bar {
+      width: 40%;
+    }
+    .new-post-info {
+      width: calc(100% - 70px);
+    }
+
     .date-author {
       margin-bottom: 30px;
     }
 
     .shop-wrapper {
-      max-width: 730px;
+      max-width: 830px;
+      /* max-width: 730px; */
       margin-bottom: 50px;
     }
 
@@ -1228,11 +1239,11 @@
     }
 
     .product-section {
-      width: calc(95% / 2);
+      width: calc(90% / 2);
     }
 
     .product-section:nth-child(even) {
-      margin-left: 5%;
+      margin-left: 10%;
     }
 
     .product-info-link {
@@ -1240,7 +1251,8 @@
     }
 
     .footer {
-      max-width: 730px;
+      width: 100%;
+      /* max-width: 730px; */
     }
   }
 
@@ -1324,7 +1336,8 @@
 
     .content-wrapper {
       flex-direction: column;
-      max-width: 330px;
+      max-width: 420px;
+      /* max-width: 330px; */
       margin-top: 40px;
       margin-bottom: 40px;
     }
@@ -1344,7 +1357,8 @@
     }
 
     .post-picture {
-      max-width: 330px;
+      max-width: 395px;
+      /* max-width: 330px; */
       margin-right: 0;
       margin-bottom: 8px;
     }
@@ -1374,7 +1388,8 @@
     }
 
     .shop-wrapper {
-      max-width: 330px;
+      max-width: 420px;
+      /* max-width: 330px; */
       margin-bottom: 50px;
     }
 
@@ -1395,7 +1410,8 @@
     }
 
     .footer {
-      max-width: 360px;
+      max-width: 100%;
+      /* max-width: 360px; */
     }
 
     .social {
